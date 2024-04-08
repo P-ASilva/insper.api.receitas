@@ -7,6 +7,5 @@ import lombok.experimental.Accessors;
 @Accessors(fluent = true, chain = true)
 public record ReceitaIn (
     String name,
-    String creator_id,
-    Componente[] componentes
+    String creator_id
 ) { }
