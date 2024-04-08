@@ -33,9 +33,4 @@ public interface ReceitasController {
         @PathVariable(required = true) String id,
         @RequestBody(required = true) ReceitaIn in
     ); 
-    // @DelMapping("/receitas/{id}")
-    // public ResponseEntity<ReceitaOut> del(
-    //     @PathVariable(required = true) String id,
-    //      @RequestHeader(required = true, name = "role-user") String roleUser
-    // );
 }
