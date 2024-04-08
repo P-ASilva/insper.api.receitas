@@ -1,5 +1,7 @@
 package insper.api.receitas;
 
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 // import org.springframework.web.bind.annotation.RequestHeader;
@@ -18,7 +20,7 @@ public interface ReceitasController {
     );
 
     @GetMapping("/receitas")
-    public ResponseEntity<ReceitaOut> read();
+    public ResponseEntity<List<ReceitaOut>> read();
     
     
     @GetMapping("/receitas/{id}")
