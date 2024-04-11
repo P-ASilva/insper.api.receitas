@@ -16,7 +16,7 @@ public interface ReceitasController {
 
     @PostMapping("/receitas")
     public ResponseEntity<ReceitaOut> create(
-        @RequestBody(required = true) ReceitaIn in
+        @RequestBody(required = true) ReceitaRequest req
     );
 
     @GetMapping("/receitas")
@@ -28,9 +28,13 @@ public interface ReceitasController {
         @PathVariable(required = true) String id
     ); 
 
+    @GetMapping("/receitas/{id}/ingredientes")
+    public ResponseEntity<ReceitaOutContent>getComponentes(
+        @PathVariable(required = true) String id
+    ); 
+
     @PutMapping("/receitas/{id}")
     public ResponseEntity<ReceitaOut> update(
-        @PathVariable(required = true) String id,
-        @RequestBody(required = true) ReceitaIn in
+        @PathVariable(required = true) String id
     ); 
 }
