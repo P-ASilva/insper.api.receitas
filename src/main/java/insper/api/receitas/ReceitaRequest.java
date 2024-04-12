@@ -13,4 +13,3 @@ public class ReceitaRequest {
     ReceitaIn in;
     List<ComponenteDTO> componentes;
 }
-
