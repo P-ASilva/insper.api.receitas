@@ -12,5 +12,5 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor @NoArgsConstructor
 public class ComponenteDTO {
     String ingrediente;
-    Integer qnt;
+    Integer qnt;    
 }

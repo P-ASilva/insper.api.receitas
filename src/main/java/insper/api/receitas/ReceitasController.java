@@ -29,7 +29,7 @@ public interface ReceitasController {
     ); 
 
     @GetMapping("/receitas/{id}/ingredientes")
-    public ResponseEntity<ReceitaOutContent>getComponentes(
+    public ResponseEntity<ReceitaOutContent> getComponentes(
         @PathVariable(required = true) String id
     ); 
 
