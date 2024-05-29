@@ -26,7 +26,12 @@ public interface ReceitasController {
     @GetMapping("/receitas/{id}")
     public ResponseEntity<ReceitaOut> get(
         @PathVariable(required = true) String id
-    ); 
+    );
+
+    @PostMapping("/receitas/{id}/ingredientes")
+    public ResponseEntity<ReceitaOutContent> addComponente(
+        @PathVariable(required = true) String id, @RequestBody(required = true) ComponenteDTO comp
+    );
 
     @GetMapping("/receitas/{id}/ingredientes")
     public ResponseEntity<ReceitaOutContent> getComponentes(
